@@ -1,0 +1,1 @@
+export const CONSTANTE_EXPORTAR = 'variable constante';
