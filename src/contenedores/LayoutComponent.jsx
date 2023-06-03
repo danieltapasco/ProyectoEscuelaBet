@@ -6,8 +6,7 @@ import logo from '../logo.svg';
 // Imports Layout
 import {
   MenuFoldOutlined,
-  MenuUnfoldOutlined,
-  UploadOutlined,
+  MenuUnfoldOutlined,  
   UserOutlined,
   VideoCameraOutlined,
 } from "@ant-design/icons";
@@ -24,10 +23,13 @@ export default function LayoutComponent({ childrens }) {
     <>
       <Layout className="menu-style">
         <Sider trigger={null} collapsible collapsed={collapsed}>
-          <div className="logoI">
+          {
+            !collapsed ? <div className="logoI">
             <img src={logo} width={100} height={100} alt="Logo"/>
             <p>Sistema Educativo</p>
           </div>
+          : <div></div>
+          }
           <Menu
             theme="dark"
             mode="inline"
